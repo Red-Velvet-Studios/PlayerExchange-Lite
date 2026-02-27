@@ -1,0 +1,25 @@
+# +-------------------------------------------------------+
+# |             RED VELVET STUDIOS - PX LITE              |
+# |         The Premium Player Exchange Experience        |
+# +-------------------------------------------------------+
+# Support: discord.gg/jPTtzPHmDR
+
+# Configuration version
+config_version: 1.0
+
+# Base price for new players' shares
+base_price: 10.0
+# Tax rate on transactions (0.02 = 2%)
+tax_rate: 0.02
+# Market update interval in seconds
+update_interval: 30
+# Enable or disable the global market
+market_enabled: true
+# Virtual wallet settings
+wallet:
+  # Starting balance for new players
+  starting_balance: 1000.0
+  # Currency localization (e.g., en_US)
+  currency_locale: "en_US"
+  # Currency symbol used in messages
+  currency_symbol: "$"

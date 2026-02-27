@@ -1,0 +1,19 @@
+name: PlayerExchange-Lite
+version: ${version}
+main: com.playerexchange.lite.core.PlayerExchangeLite
+api-version: '1.21'
+load: STARTUP
+authors: [ blaze534 ]
+description: Player-driven stock exchange with chat trading.
+commands:
+  px:
+    description: PlayerExchange Lite trading and price tools.
+    usage: /px <price|buy|sell|balance|market|gui>
+    aliases: [ playerexchange, pxlite ]
+  pxadmin:
+    description: PlayerExchange Lite admin controls.
+    usage: /pxadmin <setprice|addmoney|freeze|clear|reload>
+permissions:
+  px.admin:
+    description: PlayerExchange Lite admin permissions.
+    default: op

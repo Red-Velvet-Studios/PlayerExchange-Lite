@@ -1,0 +1,103 @@
+# +-------------------------------------------------------+
+# |             RED VELVET STUDIOS - PX LITE              |
+# |         The Premium Player Exchange Experience        |
+# +-------------------------------------------------------+
+# Support: discord.gg/jPTtzPHmDR
+
+# Configuration version
+config_version: 1.0
+
+# Prefix used in all plugin messages
+prefix: "<gradient:#00ff94:#00bdff><b>PX</b></gradient>"
+# Message displayed when a value is unknown
+common.unknown: "Unknown"
+
+# Help card with main commands
+help.card: |
+  <prefix> <gray>Main Commands</gray>
+  <dark_gray>•</dark_gray> <click:run_command:'/px price '><hover:show_text:'Click to check price'><white>/px price <player></white></hover></click> <dark_gray>-</dark_gray> <gray>Check current price</gray>
+  <dark_gray>•</dark_gray> <click:run_command:'/px buy '><hover:show_text:'Click to buy shares'><white>/px buy <player> <shares></white></hover></click> <dark_gray>-</dark_gray> <gray>Buy shares</gray>
+  <dark_gray>•</dark_gray> <click:run_command:'/px sell '><hover:show_text:'Click to sell shares'><white>/px sell <player> <shares></white></hover></click> <dark_gray>-</dark_gray> <gray>Sell shares</gray>
+  <dark_gray>•</dark_gray> <click:run_command:'/px balance'><hover:show_text:'Click to view wallet'><white>/px balance</white></hover></click> <dark_gray>-</dark_gray> <gray>Wallet balance</gray>
+  <dark_gray>•</dark_gray> <click:run_command:'/px market'><hover:show_text:'Click to view market'><white>/px market</white></hover></click> <dark_gray>-</dark_gray> <gray>Enterprise preview</gray>
+
+# Card displayed when checking a player's price
+price.card: |
+  <prefix> <gray>Market Quote</gray>
+  <white><player></white> <dark_gray>|</dark_gray> <gold><price></gold>
+  <gray>Change:</gray> <change> <gray>(<change_percent>)</gray>
+  <gray>Trend:</gray> <chart>
+  <gray>Volume:</gray> <gold><volume></gold>
+  <click:run_command:'<buy_cmd>'><hover:show_text:'<green>Click to instant buy 1 share</green>'><dark_gray>[</dark_gray><green><b>BUY</b></green><dark_gray>]</dark_gray></hover></click>
+  <click:run_command:'<sell_cmd>'><hover:show_text:'<red>Click to instant sell 1 share</red>'><dark_gray>[</dark_gray><red><b>SELL</b></red><dark_gray>]</dark_gray></hover></click>
+
+# Success message after a trade execution
+trade.success: |
+  <prefix> <gray>Trade Executed</gray>
+  <white><action> <shares> <gray>of</gray> <target></white>
+  <gray>Price:</gray> <gold><price></gold> <gray>Total:</gray> <gold><total></gold> <gray>Tax:</gray> <gold><tax></gold>
+
+# Text for the buy action
+trade.action.buy: "Buy"
+# Text for the sell action
+trade.action.sell: "Sell"
+
+# Player's wallet card
+balance.card: |
+  <prefix> <gray>Wallet</gray>
+  <white><player></white> <dark_gray>|</dark_gray> <gold><balance></gold>
+
+# Promotional message for Enterprise version
+market.enterprise: |
+  <gradient:gold:yellow><b>[PX ENTERPRISE]</b></gradient> <gray>Unlock the Visual Dashboard, Live Graphs, and MySQL Sync.</gray>
+  <click:open_url:'TUO_LINK'><hover:show_text:'Get Enterprise Edition'><aqua><b>[CLICK TO UPGRADE]</b></aqua></hover></click>
+
+# Error: command is player-only
+error.player_only: "<prefix> <gray>Command is player-only.</gray>"
+# Error: invalid usage of price command
+error.usage.price: "<prefix> <gray>Usage: /px price <player></gray>"
+# Error: invalid usage of buy command
+error.usage.buy: "<prefix> <gray>Usage: /px buy <player> <shares></gray>"
+# Error: invalid usage of sell command
+error.usage.sell: "<prefix> <gray>Usage: /px sell <player> <shares></gray>"
+# Error: player not found
+error.player_not_found: "<prefix> <gray>Player not found.</gray>"
+# Error: invalid number of shares
+error.shares_invalid: "<prefix> <gray>Shares must be a positive number.</gray>"
+# Error: insufficient funds
+error.insufficient_funds: "<prefix> <gray>Insufficient funds.</gray>"
+# Error: not enough shares in wallet
+error.not_enough_shares: "<prefix> <gray>You do not own enough shares.</gray>"
+# Error: trading is frozen for this player
+error.trade_frozen: "<prefix> <gray>Trading is frozen for this player.</gray>"
+# Error: market is disabled
+error.market_disabled: "<prefix> <gray>Market is disabled.</gray>"
+
+# Admin: no permission
+admin.no_permission: "<prefix> <gray>No permission.</gray>"
+# Admin: main command usage
+admin.usage.main: "<prefix> <gray>Usage: /pxadmin setprice <player> <value> | /pxadmin addmoney <player> <value> | /pxadmin freeze <player> | /pxadmin clear | /pxadmin reload</gray>"
+# Admin: setprice command usage
+admin.usage.setprice: "<prefix> <gray>Usage: /pxadmin setprice <player> <value></gray>"
+# Admin: addmoney command usage
+admin.usage.addmoney: "<prefix> <gray>Usage: /pxadmin addmoney <player> <value></gray>"
+# Admin: freeze command usage
+admin.usage.freeze: "<prefix> <gray>Usage: /pxadmin freeze <player></gray>"
+# Admin: clear command usage
+admin.usage.clear: "<prefix> <gray>Usage: /pxadmin clear</gray>"
+# Admin: reload command usage
+admin.usage.reload: "<prefix> <gray>Usage: /pxadmin reload</gray>"
+# Admin: invalid number entered
+admin.error.invalid_number: "<prefix> <gray>Invalid number.</gray>"
+# Admin: success setting price
+admin.setprice.success: "<prefix> <gray>Price for <player> set to <price>.</gray>"
+# Admin: success adding money
+admin.addmoney.success: "<prefix> <gray>Added <amount> to <player>.</gray>"
+# Admin: success freezing player
+admin.freeze.success: "<prefix> <gray>Player <player> frozen.</gray>"
+# Admin: success unfreezing player
+admin.unfreeze.success: "<prefix> <gray>Player <player> unfrozen.</gray>"
+# Admin: success clearing market
+admin.clear.success: "<prefix> <gray>Market cleared and prices reset.</gray>"
+# Admin: success reloading config
+admin.reload.success: "<prefix> <gray>Configuration reloaded.</gray>"
