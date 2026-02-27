@@ -43,5 +43,5 @@ To build from source:
 
 **Note:** We are currently working on **PX Enterprise**, which will include Inventory GUIs, MySQL support, and Discord integration. 
 
-Support: [Join our Discord](https://discord.gg/yv7FBzSCbm)
+Support: Still working on
 Download: [Modrinth Page](https://modrinth.com/plugin/px-lite-the-next-gen-player-stock-market-1.21)
